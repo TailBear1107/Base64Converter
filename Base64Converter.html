@@ -1,0 +1,76 @@
+<!DOCTYPE html><!-- 註解此為HTML形式網頁 -->
+<html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 增加一個行動裝置的版面宣告 -->
+    <!--  -->
+
+    <title>Base64轉換器</title>
+    <link rel="stylesheet" type="text/css" href="./mainstyle.css"><!-- 引入主要css檔案 -->
+    <script src="./script.js" defer="defer"></script>
+    <style>
+        input.button {
+            width:120px;
+            height:40px;
+            border:2px blue none;
+            background-color:rgb(62,230,81);
+            border-radius: 5px; 
+            color: white; 
+            font-size: 17px; 
+            font-weight: bold;
+        }
+        input.button:hover {
+            background-color:rgb(62,230,150);
+            cursor: pointer;/* 移到按鈕上換成點擊的游標圖示 */
+        }
+        input.input {
+            display: inline-block;
+            width:400px;
+            height:36px;
+            line-height:20px;
+            font-size:20px;
+        }
+        #output{
+            width: 400px;
+            height: 90px;
+            text-align: center;
+            font-size: 30px;
+        }  
+        #in{
+            justify-content: center;
+            text-align: center;
+        }
+        #out{
+            justify-content: center;
+            text-align: center;
+        }
+    </style>    
+</head>
+
+<body>
+    <nav>
+        <ul class="topbar">
+            <li><a class="title" href="javascript:window.location.reload()" title="重新載入此頁">Base64 Converter</a></li>
+        </ul>    
+    </nav>
+
+    <br>
+
+    <div id="in">
+        <input type="input" name="input" class="input" id="input" placeholder="請輸入欲轉換之Base64編碼片段" required autofocus>
+        <input type="button" value="解碼" class="button" id="decode_button" >
+    </div>
+
+    <div id="out">
+    <section>
+        <h1 style="color: aquamarine; font-size: 20px; font-weight: bold;">解碼結果</h1>
+        <div id="status"></div>
+        <div style="justify-content: center;display: flex; flex-wrap: wrap;">
+            <textarea id="output" readonly="readonly">請輸入欲轉換之Base64編碼片段以取得結果</textarea>
+        </div>
+    </section>
+    </div>
+</body>
+</html>
