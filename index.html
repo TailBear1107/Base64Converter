@@ -11,18 +11,32 @@
     <link rel="stylesheet" type="text/css" href="./mainstyle.css"><!-- 引入主要css檔案 -->
     <script src="./script.js" defer="defer"></script>
     <style>
-        input.button {
+        #decode_button {
             width:120px;
             height:40px;
-            border:2px blue none;
+            border:2px none;
             background-color:rgb(62,230,81);
             border-radius: 5px; 
             color: white; 
             font-size: 17px; 
             font-weight: bold;
         }
-        input.button:hover {
+        #decode_button:hover {
             background-color:rgb(62,230,150);
+            cursor: pointer;/* 移到按鈕上換成點擊的游標圖示 */
+        }
+        #encode_button {
+            width:120px;
+            height:40px;
+            border:2px none;
+            background-color:rgb(62, 138, 230);
+            border-radius: 5px; 
+            color: white; 
+            font-size: 17px; 
+            font-weight: bold;
+        }
+        #encode_button:hover {
+            background-color:rgb(62, 230, 230);
             cursor: pointer;/* 移到按鈕上換成點擊的游標圖示 */
         }
         input.input {
@@ -32,17 +46,13 @@
             line-height:20px;
             font-size:20px;
         }
-        #output{
+        #outputd,#outpute{
             width: 400px;
             height: 90px;
             text-align: center;
             font-size: 30px;
         }  
-        #in{
-            justify-content: center;
-            text-align: center;
-        }
-        #out{
+        #ind,#outd,#ine,#oute{
             justify-content: center;
             text-align: center;
         }
@@ -58,17 +68,32 @@
 
     <br>
 
-    <div id="in">
-        <input type="input" name="input" class="input" id="input" placeholder="請輸入欲轉換之Base64編碼片段" required autofocus>
+    <div id="ind">
+        <input type="input" name="inputb64" class="input" id="inputb64" placeholder="請輸入欲轉換之Base64編碼片段" required autofocus>
         <input type="button" value="解碼" class="button" id="decode_button" >
     </div>
 
-    <div id="out">
+    <div id="outd">
     <section>
         <h1 style="color: aquamarine; font-size: 20px; font-weight: bold;">解碼結果</h1>
-        <div id="status"></div>
         <div style="justify-content: center;display: flex; flex-wrap: wrap;">
-            <textarea id="output" readonly="readonly">請輸入欲轉換之Base64編碼片段以取得結果</textarea>
+            <textarea id="outputd" readonly="readonly">請輸入欲轉換之Base64編碼片段以取得結果</textarea>
+        </div>
+    </section>
+    </div>
+
+    <hr>
+
+    <div id="ine">
+        <input type="input" name="inputb64e" class="input" id="inputb64e" placeholder="請輸入欲轉換為Base64編碼之文字片段" required autofocus>
+        <input type="button" value="編碼" class="button" id="encode_button" >
+    </div>
+
+    <div id="oute">
+    <section>
+        <h1 style="color: aqua; font-size: 20px; font-weight: bold;">編碼結果</h1>
+        <div style="justify-content: center;display: flex; flex-wrap: wrap;">
+            <textarea id="outpute" readonly="readonly">請輸入欲轉換為Base64編碼之文字片段以取得結果</textarea>
         </div>
     </section>
     </div>
